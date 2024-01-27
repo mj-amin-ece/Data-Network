@@ -1,0 +1,128 @@
+
+
+This will create a bond interface named `bond0` consisting of the three physical interfaces (`eth0`, `eth1`, and `eth2`).
+
+b. **Bonding Modes:**
+
+Bonding modes determine how network traffic is distributed across the member interfaces and how failover is handled. Here are some common bonding modes:
+
+1. **Balance-rr (Round Robin):**
+   - Distributes outgoing traffic in a round-robin fashion.
+   - Useful for load balancing, but it does not provide any fault tolerance.
+   - `mode=0` in bonding configuration.
+
+2. **Active-Backup:**
+   - Only one interface is active while others are backup.
+   - Provides failover capability.
+   - `mode=1` in bonding configuration.
+
+3. **Balance-XOR:**
+   - Uses XOR operation to select the interface based on the source and destination MAC addresses.
+   - Provides load balancing.
+   - `mode=2` in bonding configuration.
+
+4. **Broadcast:**
+   - Sends all traffic on all interfaces.
+   - Simplest mode but not efficient for load balancing.
+   - `mode=3` in bonding configuration.
+
+5. **802.3ad (LACP):**
+   - Uses Link Aggregation Control Protocol (LACP) to negotiate link aggregation with the switch.
+   - Provides load balancing and failover.
+   - Requires switch support.
+   - `mode=4` in bonding configuration.
+
+6. **Balance-tlb (Adaptive Transmit Load Balancing):**
+   - Distributes outgoing traffic based on current load.
+   - Better load balancing than Round Robin.
+   - `mode=5` in bonding configuration.
+
+7. **Balance-alb (Adaptive Load Balancing):**
+   - Similar to TLB but also includes receive load balancing.
+   - Dynamically reassigns MAC addresses to balance loads.
+   - `mode=6` in bonding configuration.
+
+To configure the bonding mode, you need to specify the `mode` parameter in the bonding configuration file or during the bonding interface creation. The configuration file is often located at `/etc/modprobe.d/bonding.conf`. For example, to set the bonding mode to Active-Backup, you can add the following line to the configuration file:
+
+
+-----------------------------------------------------------------------
+a. **Show the Routing Table:**
+
+To display the routing table in a Linux system, you can use the `ip route` command. Here's an example:
+
+```bash
+ip route show
+```
+
+This will show the routing table, and a typical output might look like:
+
+```
+default via 192.168.1.1 dev eth0
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.100
+192.168.2.0/24 dev eth1 proto kernel scope link src 192.168.2.100
+```
+
+Each line in the output represents a route in the routing table.
+
+- **`default via 192.168.1.1 dev eth0`:**
+  - `default`: This is the default route.
+  - `via 192.168.1.1`: Traffic not matching any specific route will be sent to this gateway (IP address).
+  - `dev eth0`: The interface through which the traffic will be sent.
+
+- **`192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.100`:**
+  - `192.168.1.0/24`: The destination network.
+  - `dev eth0`: The interface through which the traffic to this network will be sent.
+  - `proto kernel`: The route was added by the kernel.
+  - `scope link`: The route is a link-local route.
+  - `src 192.168.1.100`: The source IP address for the route.
+
+--------------------------------------------------
+a. **Creating VLANs with Bridges:**
+
+Firstly, make sure you have the `bridge-utils` package installed. If not, you can install it using:
+
+```bash
+sudo apt-get install bridge-utils   # For Debian/Ubuntu
+```
+
+Now, let's create VLANs with bridges:
+
+```bash
+# Create the VLAN interfaces (VLAN11 and VLAN12)
+sudo ip link add link eth1 name eth1.11 type vlan id 11
+sudo ip link add link eth3 name eth3.12 type vlan id 12
+
+# Create the bridges (br1 for VLAN11 and br2 for VLAN12)
+sudo brctl addbr br1
+sudo brctl addbr br2
+
+# Add the VLAN interfaces to the respective bridges
+sudo brctl addif br1 eth1.11
+sudo brctl addif br2 eth3.12
+
+# Set the bridges to the UP state
+sudo ip link set br1 up
+sudo ip link set br2 up
+```
+
+For eth2 to be a tagged trunk (part of both VLANs), you can add it directly to the bridges without VLAN tagging:
+
+```bash
+# Add eth2 to both bridges without VLAN tagging
+sudo brctl addif br1 eth2
+sudo brctl addif br2 eth2
+```
+
+This setup places eth1 in VLAN11, eth3 in VLAN12, and eth2 in both VLANs (as a tagged trunk).
+
+b. **Trunks:**
+
+In networking, a trunk is a communication path between two network devices where multiple VLANs can travel. In the context of Ethernet, trunks are often used to carry traffic for multiple VLANs over a single physical link.
+
+In the given scenario, eth2 is configured as a tagged trunk because it carries traffic for both VLAN11 and VLAN12. The VLAN tagging allows the switch or other network devices to distinguish between the VLANs.
+
+c. **MAC Address Tables in 3 VLANs:**
+
+The MAC address tables for VLANs 11, 12, and the default/native VLAN are expected to be different. Each VLAN operates as a separate broadcast domain, and the MAC address table is specific to each VLAN. Devices in one VLAN are generally not aware of devices in other VLANs, and the switches maintain separate MAC address tables for each VLAN.
+
+So, the MAC address tables for VLAN11, VLAN12, and the default VLAN are likely to contain the MAC addresses of devices within their respective VLANs, but not devices in other VLANs. VLAN separation helps in isolating broadcast domains and enhancing network security.

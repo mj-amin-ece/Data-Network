@@ -1,0 +1,303 @@
+sudo ip link set ens33 down
+sudo ip link set ens33 name eth10
+sudo ip link set eth10 up
+------------------------------------------------------------
+   Network interface
+   
+  a)
+  
+$
+sudo ip link add eth0 type dummy
+sudo ip link add eth1 type dummy
+sudo ip link add eth2 type dummy
+
+# all interface for adding to bond must be down
+
+sudo modprobe bonding
+
+sudo ip link add bond0 type bond mode 802.3ad
+
+# Add eth0, eth1, and eth2 to the bond
+
+sudo ip link set eth0 master bond0
+sudo ip link set eth1 master bond0
+sudo ip link set eth2 master bond0
+
+# Activate the bond interface
+sudo ip link set bond0 up
+
+# To check the status of a bonded interface
+
+cat /proc/net/bonding/bond0
+
+
+# Delete bond 0
+sudo ip link set bond0 down   
+sudo ip link delete bond0    
+
+---------------------------------------------------------------
+
+bridging
+a)
+# Alreade create interfaces in last section
+# Create the bridge 
+
+# Create the bridge interface (br0)
+$ sudo ip link add name br0 type bridge
+
+# Add eth0, eth1, and eth2 to the bridge
+$ sudo ip link set eth0 master br0
+$ sudo ip link set eth1 master br0
+$ sudo ip link set eth2 master br0
+
+$ sudo ip link set dev br0 up
+
+# Delete bridges
+# sudo ip link set br0 down
+# sudo brctl delbr br0
+
+b)
+
+sudo brctl showmacs br0
+
+# sudo bridge fdb show
+# sudo brctl show
+# sudo ip link show type bridge
+
+
+c)
+# To enable STP on a bridge:
+sudo brctl stp br0 on
+
+# sudo ip link set dev br0 type bridge stp on
+
+-----------------------------------------------------------------------
+neighbor Table
+a)
+$ 
+ip neigh show
+-----------------------------------------------------------------------
+Ip Routing
+a)
+$ 
+ip route show
+
+c)
+
+sudo ip link set dev eth1 up
+sudo ip route add 192.168.1.1 dev eth1
+
+
+
+#sudo nano /etc/network/if-up.d/custom-routes
+# sudo chmod +x /etc/network/if-up.d/custom-routes
+
+---------------------------------------------------------------------
+VLAN
+
+
+sudo apt-get install bridge-utils   
+
+# add eth3
+sudo ip link add eth3 type dummy
+
+sudo modprobe 8021q
+sudo ip link add br0 type bridge vlan_filtering 1
+sudo ip link set eth1 master br0
+sudo ip link set eth2 master br0
+sudo ip link set eth3 master br0
+
+sudo bridge vlan add dev eth1 vid 11 pvid untagged
+sudo bridge vlan add dev eth3 vid 12 pvie untagged
+sudo bridge vlan add dev eth3 vid 11
+sudo bridge vlan add dev eth2 vid 12
+
+sudo ip link set up dev br0
+sudo ip link set up dev eth0
+sudo ip link set up dev eth1
+sudo ip link set up dev eth2
+sudo ip link set up dev eth3
+
+
+
+bridge link show
+bridge vlan show
+bridge fdb show
+
+--------------------------------------------------------------
+mj@mj-virtual-machine:~$ sudo ip link add eth3 type dummy
+mj@mj-virtual-machine:~$ 
+# Load the 8021q module
+sudo modprobe 8021q
+
+# Create a bridge named br0 with VLAN filtering enabled
+sudo ip link add br0 type bridge vlan_filtering 1
+
+# Attach eth1, eth2, and eth3 to the br0 bridge
+sudo ip link set eth1 master br0
+sudo ip link set eth2 master br0
+sudo ip link set eth3 master br0
+
+# Add VLAN 11 to eth1 with untagged traffic (pvid)
+sudo bridge vlan add dev eth1 vid 11 pvid untagged
+
+# Add VLAN 12 to eth3 with untagged traffic (pvid)
+sudo bridge vlan add dev eth3 vid 12 pvid untagged
+
+# Add VLAN 11 to eth3
+sudo bridge vlan add dev eth3 vid 11
+
+# Add VLAN 12 to eth2
+sudo bridge vlan add dev eth2 vid 12
+
+# Bring up the bridge and associated interfaces
+sudo ip link set up dev br0
+sudo ip link set up dev eth0
+sudo ip link set up dev eth1
+sudo ip link set up dev eth2
+sudo ip link set up dev eth3
+
+
+mj@mj-virtual-machine:~$ bridge link show
+6: eth1: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 100 
+7: eth2: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 100 
+10: eth3: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 100 
+mj@mj-virtual-machine:~$ bridge vlan show
+port              vlan-id  
+eth1              1 Egress Untagged
+                  11 PVID Egress Untagged
+eth2              1 PVID Egress Untagged
+                  12
+eth3              1 PVID Egress Untagged
+                  11
+                  12 Egress Untagged
+br0               1 PVID Egress Untagged
+mj@mj-virtual-machine:~$ bridge fdb show
+33:33:ff:91:45:75 dev eth10 self permanent
+01:00:5e:00:00:01 dev eth10 self permanent
+33:33:00:00:00:fb dev eth10 self permanent
+01:00:5e:00:00:fb dev eth10 self permanent
+33:33:00:00:00:01 dev eth10 self permanent
+33:33:00:00:00:01 dev eth0 self permanent
+01:00:5e:00:00:01 dev eth0 self permanent
+4a:6b:77:a3:99:91 dev eth1 vlan 11 master br0 permanent
+4a:6b:77:a3:99:91 dev eth1 vlan 1 master br0 permanent
+4a:6b:77:a3:99:91 dev eth1 master br0 permanent
+33:33:00:00:00:01 dev eth1 self permanent
+01:00:5e:00:00:01 dev eth1 self permanent
+1e:7b:4b:09:ac:85 dev eth2 vlan 12 master br0 permanent
+1e:7b:4b:09:ac:85 dev eth2 vlan 1 master br0 permanent
+1e:7b:4b:09:ac:85 dev eth2 master br0 permanent
+33:33:00:00:00:01 dev eth2 self permanent
+01:00:5e:00:00:01 dev eth2 self permanent
+32:23:88:3c:74:9b dev eth3 vlan 11 master br0 permanent
+32:23:88:3c:74:9b dev eth3 vlan 12 master br0 permanent
+32:23:88:3c:74:9b dev eth3 vlan 1 master br0 permanent
+32:23:88:3c:74:9b dev eth3 master br0 permanent
+33:33:00:00:00:01 dev eth3 self permanent
+01:00:5e:00:00:01 dev eth3 self permanent
+33:33:00:00:00:01 dev br0 self permanent
+01:00:5e:00:00:6a dev br0 self permanent
+33:33:00:00:00:6a dev br0 self permanent
+01:00:5e:00:00:01 dev br0 self permanent
+33:33:ff:80:5c:4a dev br0 self permanent
+33:33:00:00:00:fb dev br0 self permanent
+a2:97:4c:80:5c:4a dev br0 vlan 1 master br0 permanent
+a2:97:4c:80:5c:4a dev br0 master br0 permanent
+mj@mj-virtual-machine:~
+
+--------------------------------------------------------------
+Name Space
+
+sudo ip netns add ns1
+sudp ip netns add ns2
+
+#sudo ip netns list #show nets
+#sudo ip netns delete ns1
+
+sudo ip link add eth-ns1 type veth peer name eth-ns2
+sudo ip link set eth-ns1 netns ns1
+sudo ip link set eth-ns2 netns ns2
+
+sudo ip netns exec ns1 ip addr add 192.168.1.1/24 dev eth-ns1
+sudo ip netns exec ns2 ip addr add 192.168.1.2/24 dev eth-ns2
+
+sudo ip netns exec ns1 ip link set eth-ns1 up 
+sudo ip netns exec ns2 ip link set eth-ns2 up
+
+sudo ip netns exec ns1 ping 192.168.1.2
+-----------------------------------------------
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <namespace1> <namespace2>"
+    exit 1
+fi
+
+ns1=$1
+ns2=$2
+
+# Create network namespaces
+sudo ip netns add $ns1
+sudo ip netns add $ns2
+
+# Create a virtual Ethernet pair
+sudo ip link add eth-${ns1} type veth peer name eth-${ns2}
+
+# Move each end of the pair to its respective namespace
+sudo ip link set eth-${ns1} netns $ns1
+sudo ip link set eth-${ns2} netns $ns2
+
+# Assign IP addresses to the interfaces
+sudo ip netns exec $ns1 ip addr add 192.168.1.1/24 dev eth-${ns1}
+sudo ip netns exec $ns2 ip addr add 192.168.1.2/24 dev eth-${ns2}
+
+# Bring up the interfaces
+sudo ip netns exec $ns1 ip link set eth-${ns1} up
+sudo ip netns exec $ns2 ip link set eth-${ns2} up
+
+# Example: Ping from ns1 to ns2
+sudo ip netns exec $ns1 ping 192.168.1.2
+
+
+
+
+
+-----------------------------------------
+
+sudo ip netns add ns1
+sudo ip netns add ns2
+
+
+sudo ip link add eth1 type veth peer name eth2
+
+sudo ip link set eth1 netns ns1
+sudo ip link set eth2 netns ns2
+
+sudo ip netns exec ns1 ip addr add 192.168.1.1/24 dev eth1
+sudo ip netns exec ns2 ip addr add 192.168.1.2/24 dev eth2
+
+
+sudo ip netns exec ns1 ip link set eth1 up
+sudo ip netns exec ns2 ip link set eth2 up
+
+sudo ip netns exec ns1 ping 192.168.1.2
+
+
+nano myscript.sh
+
+
+
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <node1> <node2>"
+    exit 1
+fi
+
+node1=$1
+node2=$2
+
+sudo ip netns exec $node1 ping -c 4 192.168.1.2
+--------------------------
+
