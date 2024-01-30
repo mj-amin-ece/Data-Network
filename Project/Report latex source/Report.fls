@@ -1,8 +1,8 @@
-PWD c:/Users/mjami/OneDrive/Desktop/DN - Project/report
+PWD c:/Users/mjami/OneDrive/Documents/DN/Data-Network-1/Project/Report latex source
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/mjami/OneDrive/Desktop/DN - Project/report/Report.tex
+INPUT c:/Users/mjami/OneDrive/Documents/DN/Data-Network-1/Project/Report latex source/Report.tex
 OUTPUT Report.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/report.cls
