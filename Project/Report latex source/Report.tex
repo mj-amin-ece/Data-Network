@@ -12,8 +12,6 @@
 \usepackage{caption}
 
 
-
-% Define colors for syntax highlighting
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codeblue}{rgb}{0,0,0.8}
@@ -224,9 +222,8 @@ $ ip addr
 \end{itemize}
 
 The loopback interface (\texttt{lo}) is used for local communication within the host itself, and it always has the IP address 127.0.0.1.
-The Ethernet interface (\texttt{eth10}) is typically used for network communication, and its IP address is assigned dynamically (in this case, it's 192.168.184.133).\cite{5} \\
-
-
+The Ethernet interface (\texttt{eth10}) in a virtual machine is utilized for network communication,
+facilitating connectivity with the host's physical network and enabling internet access.\cite{5} \\
 
 \textbf{How the System Has Received Its IP Configuration:}
 \begin{itemize}
@@ -615,15 +612,15 @@ In the given scenario, eth2 is configured as a tagged trunk because it carries t
 The VLAN tagging allows the switch or other network devices to distinguish between the VLANs.
 
 \subsubsection*{c. MAC Address Tables in 3 VLANs}
-The MAC address tables for VLANs 11, 12, and the default/native VLAN are expected to be different. 
+The MAC address tables for VLANs 11, 12, and the default/native VLAN are different. 
 Each VLAN operates as a separate broadcast domain, and the MAC address table is specific to each VLAN.
-Devices in one VLAN are generally not aware of devices in other VLANs, and the switches maintain separate MAC address tables for each VLAN.
+Devices in one VLAN are not aware of devices in other VLANs, and the switches maintain separate MAC address tables for each VLAN.
 So, the MAC address tables for VLAN11, VLAN12, and the default VLAN are contain the MAC addresses of devices within their respective VLANs, but not devices in other VLANs.
-
+\newpage
 \subsubsection*{d. Screenshots}
 \begin{figure}[h] 
   \centering 
-  \includegraphics[width=0.9\textwidth]{31.jpg} 
+  \includegraphics[width=0.8\textwidth]{31.jpg} 
 \end{figure} 
 
 

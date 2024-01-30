@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.2)  31 JAN 2024 01:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.2)  31 JAN 2024 02:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -291,12 +291,12 @@ Package caption Info: Standard document class detected.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 56.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 54.
  (c:/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 56.
+(Font)              scaled to size 10.0pt on input line 54.
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count290
@@ -304,24 +304,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count291
@@ -378,7 +378,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 56.
+Package hyperref Info: Link coloring OFF on input line 54.
 (./Report.out) (./Report.out)
 \@outlinefile=\write3
 \openout3 = `Report.out'.
@@ -387,27 +387,27 @@ Package hyperref Info: Link coloring OFF on input line 56.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 60.
+(Font)              scaled to size 9.0pt on input line 58.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.0pt on input line 60.
+(Font)              scaled to size 9.0pt on input line 58.
 <logo.png, id=60, 602.25pt x 595.22375pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 64.
+Package pdftex.def Info: logo.png  used on input line 62.
 (pdftex.def)             Requested size: 157.57297pt x 155.73541pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 68.
+(Font)              scaled to size 24.88pt on input line 66.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 72.
+(Font)              scaled to size 14.4pt on input line 70.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 74.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 74.
  [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./logo.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 91.
+(Font)              scaled to size 24.88pt on input line 89.
  (./Report.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
@@ -423,16 +423,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 \newpage
+l.91 \newpage
               [1
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 98.
+(Font)              scaled to size 14.4pt on input line 96.
 <1.jpg, id=90, 1434.35875pt x 750.805pt>
 File: 1.jpg Graphic file (type jpg)
 <use 1.jpg>
-Package pdftex.def Info: 1.jpg  used on input line 127.
+Package pdftex.def Info: 1.jpg  used on input line 125.
 (pdftex.def)             Requested size: 315.14594pt x 164.95993pt.
  [2
 
@@ -440,50 +440,50 @@ Package pdftex.def Info: 1.jpg  used on input line 127.
 <3.png, id=106, 721.94719pt x 376.40625pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 158.
+Package pdftex.def Info: 3.png  used on input line 156.
 (pdftex.def)             Requested size: 315.14594pt x 164.30974pt.
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 164.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 162.
  (c:/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 164.
+(Font)              scaled to size 10.0pt on input line 162.
 <2.jpg, id=108, 819.06pt x 421.575pt>
 File: 2.jpg Graphic file (type jpg)
 <use 2.jpg>
-Package pdftex.def Info: 2.jpg  used on input line 185.
+Package pdftex.def Info: 2.jpg  used on input line 183.
 (pdftex.def)             Requested size: 262.61894pt x 135.17049pt.
  [3{c:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <./3.png> <./2.jpg>] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 200.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 198.
  (c:/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 200.
+(Font)              scaled to size 10.0pt on input line 198.
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 198.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 201.
+(Font)              scaled to size 8.0pt on input line 199.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 201.
+(Font)              scaled to size 5.0pt on input line 199.
 <11.png, id=125, 1087.06125pt x 471.7625pt>
 File: 11.png Graphic file (type png)
 <use 11.png>
-Package pdftex.def Info: 11.png  used on input line 207.
+Package pdftex.def Info: 11.png  used on input line 205.
 (pdftex.def)             Requested size: 472.71088pt x 205.15024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
 
  []
 
 <12.png, id=127, 779.91376pt x 822.07124pt>
 File: 12.png Graphic file (type png)
 <use 12.png>
-Package pdftex.def Info: 12.png  used on input line 252.
+Package pdftex.def Info: 12.png  used on input line 249.
 (pdftex.def)             Requested size: 472.71088pt x 498.26405pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -494,12 +494,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <21.png, id=154, 426.99525pt x 254.1495pt>
 File: 21.png Graphic file (type png)
 <use 21.png>
-Package pdftex.def Info: 21.png  used on input line 301.
+Package pdftex.def Info: 21.png  used on input line 298.
 (pdftex.def)             Requested size: 472.71088pt x 281.37634pt.
 <13.png, id=157, 779.91376pt x 962.59625pt>
 File: 13.png Graphic file (type png)
 <use 13.png>
-Package pdftex.def Info: 13.png  used on input line 333.
+Package pdftex.def Info: 13.png  used on input line 330.
 (pdftex.def)             Requested size: 367.6649pt x 453.78629pt.
 
 
@@ -509,7 +509,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <22.png, id=200, 257.16075pt x 163.812pt>
 File: 22.png Graphic file (type png)
 <use 22.png>
-Package pdftex.def Info: 22.png  used on input line 372.
+Package pdftex.def Info: 22.png  used on input line 369.
 (pdftex.def)             Requested size: 262.61894pt x 167.29097pt.
  [8
 
@@ -517,47 +517,44 @@ Package pdftex.def Info: 22.png  used on input line 372.
 <16.png, id=228, 1096.095pt x 915.42pt>
 File: 16.png Graphic file (type png)
 <use 16.png>
-Package pdftex.def Info: 16.png  used on input line 454.
+Package pdftex.def Info: 16.png  used on input line 451.
 (pdftex.def)             Requested size: 367.6649pt x 307.0622pt.
  [9 <./16.png>]
 <17.png, id=241, 734.745pt x 160.6pt>
 File: 17.png Graphic file (type png)
 <use 17.png>
-Package pdftex.def Info: 17.png  used on input line 472.
+Package pdftex.def Info: 17.png  used on input line 469.
 (pdftex.def)             Requested size: 472.71088pt x 103.32765pt.
  [10 <./17.png>]
 <18.png, id=259, 834.11626pt x 259.97125pt>
 File: 18.png Graphic file (type png)
 <use 18.png>
-Package pdftex.def Info: 18.png  used on input line 551.
+Package pdftex.def Info: 18.png  used on input line 548.
 (pdftex.def)             Requested size: 472.71088pt x 147.33228pt.
 <23.png, id=260, 423.38174pt x 205.9695pt>
 File: 23.png Graphic file (type png)
 <use 23.png>
-Package pdftex.def Info: 23.png  used on input line 561.
+Package pdftex.def Info: 23.png  used on input line 558.
 (pdftex.def)             Requested size: 472.71088pt x 229.96768pt.
  [11 <./18.png> <./23.png>]
 <19.jpg, id=295, 906.38625pt x 499.8675pt>
 File: 19.jpg Graphic file (type jpg)
 <use 19.jpg>
-Package pdftex.def Info: 19.jpg  used on input line 605.
+Package pdftex.def Info: 19.jpg  used on input line 602.
 (pdftex.def)             Requested size: 472.71088pt x 260.69533pt.
-<31.jpg, id=296, 585.18625pt x 769.87625pt>
+ [12 <./19.jpg>]
+<31.jpg, id=322, 585.18625pt x 769.87625pt>
 File: 31.jpg Graphic file (type jpg)
 <use 31.jpg>
-Package pdftex.def Info: 31.jpg  used on input line 626.
-(pdftex.def)             Requested size: 472.71088pt x 621.92824pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12 <./19.jpg>] [13 <./31.jpg>] [14
+Package pdftex.def Info: 31.jpg  used on input line 623.
+(pdftex.def)             Requested size: 420.19191pt x 552.83032pt.
+ [13 <./31.jpg>] [14
 
 ]
 <24.png, id=337, 514.92375pt x 193.9245pt>
 File: 24.png Graphic file (type png)
 <use 24.png>
-Package pdftex.def Info: 24.png  used on input line 706.
+Package pdftex.def Info: 24.png  used on input line 703.
 (pdftex.def)             Requested size: 472.71088pt x 178.03098pt.
  [15 <./24.png>] [16] [17
 
@@ -580,7 +577,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,12n,117p,560b,2052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Report.pdf (19 pages, 1126968 bytes).
+Output written on Report.pdf (19 pages, 1126972 bytes).
 PDF statistics:
  533 PDF objects out of 1000 (max. 8388607)
  466 compressed objects within 5 object streams
