@@ -587,8 +587,8 @@ sudo bridge vlan add dev eth1 vid 11 pvid untagged
 # Add VLAN 12 to eth3 with untagged traffic 
 sudo bridge vlan add dev eth3 vid 12 pvid untagged
 
-# Add VLAN 11 to eth3
-sudo bridge vlan add dev eth3 vid 11
+# Add VLAN 11 to eth2
+sudo bridge vlan add dev eth2 vid 11
 
 # Add VLAN 12 to eth2
 sudo bridge vlan add dev eth2 vid 12
@@ -605,7 +605,7 @@ This setup places eth1 in VLAN11, eth3 in VLAN12, and eth2 in both VLANs\cite{5}
 
 \begin{figure}[h] 
   \centering 
-  \includegraphics[width=0.9\textwidth]{19.png} 
+  \includegraphics[width=0.9\textwidth]{19.jpg} 
 \end{figure} 
 
 
@@ -626,9 +626,7 @@ So, the MAC address tables for VLAN11, VLAN12, and the default VLAN are contain 
 \subsubsection*{d. Screenshots}
 \begin{figure}[h] 
   \centering 
-  \includegraphics[width=0.9\textwidth]{31.png} 
-  \centering 
-  \includegraphics[width=0.9\textwidth]{32.png} 
+  \includegraphics[width=0.9\textwidth]{31.jpg} 
 \end{figure} 
 
 
@@ -767,30 +765,59 @@ Now, attempt to ping again:
 $ sudo ip netns exec ns1 ping 192.168.1.2
 \end{lstlisting}
 
-\textbf{Observation:} The nodes should be reachable now.
+\textbf{Observation:} The nodes are reachable now.
 
 \subsection*{g. Write Bash Script}
 
-Create a bash script named \texttt{my-script.sh}:
+Create a bash script named \texttt{my-script.sh} use nano:
+\begin{lstlisting}[language=bash]
+  $ nano my_script.sh
+\end{lstlisting}
 
 \begin{lstlisting}[language=bash]
-#!/bin/bash
-node1=$1
-node2=$2
+  #!/bin/bash
 
-sudo ip netns exec $node1 ping 192.168.1.2
+  if [ "$#" -ne 2 ]; then
+      echo "Usage: $0 <node1> <node2>"
+      exit 1
+  fi
+  
+  node1=$1
+  node2=$2
+  
+  # Create network namespaces
+  sudo ip netns add $node1
+  sudo ip netns add $node2
+  
+  # Create a virtual Ethernet pair
+  sudo ip link add eth1 type veth peer name eth2
+  
+  # Move each end of the pair to its respective namespace
+  sudo ip link set eth1 netns $node1
+  sudo ip link set eth2 netns $node2
+  
+  # Assign IP addresses to the interfaces
+  sudo ip netns exec $node1 ip addr add 192.168.1.1/24 dev eth1
+  sudo ip netns exec $node2 ip addr add 192.168.1.2/24 dev eth2
+  
+  # Bring up the interfaces
+  sudo ip netns exec $node1 ip link set eth1 up
+  sudo ip netns exec $node2 ip link set eth2 up
+  
+  # Ping from node1 to node2
+  sudo ip netns exec $node1 ping 192.168.1.2
 \end{lstlisting}
 
 Make it executable:
 
 \begin{lstlisting}[language=bash]
-chmod +x my-script.sh
+chmod +x my_script.sh
 \end{lstlisting}
 
 Run the script:
 
 \begin{lstlisting}[language=bash]
-./my-script.sh ns1 ns2
+./my_script.sh node1 node2
 \end{lstlisting}
 
 \subsection*{h. Ping 8.8.8.8 from Each Namespace}

@@ -1,8 +1,8 @@
-PWD c:/Users/mjami/OneDrive/Desktop/report
+PWD c:/Users/mjami/OneDrive/Desktop/DN - Project/report
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/mjami/OneDrive/Desktop/report/Report.tex
+INPUT c:/Users/mjami/OneDrive/Desktop/DN - Project/report/Report.tex
 OUTPUT Report.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/report.cls
@@ -765,21 +765,16 @@ INPUT ./23.png
 INPUT 23.png
 INPUT ./23.png
 INPUT ./23.png
-INPUT ./19.png
-INPUT ./19.png
-INPUT 19.png
-INPUT ./19.png
-INPUT ./19.png
-INPUT ./31.png
-INPUT ./31.png
-INPUT 31.png
-INPUT ./31.png
-INPUT ./31.png
-INPUT ./32.png
-INPUT ./32.png
-INPUT 32.png
-INPUT ./32.png
-INPUT ./32.png
+INPUT ./19.jpg
+INPUT ./19.jpg
+INPUT 19.jpg
+INPUT ./19.jpg
+INPUT ./19.jpg
+INPUT ./31.jpg
+INPUT ./31.jpg
+INPUT 31.jpg
+INPUT ./31.jpg
+INPUT ./31.jpg
 INPUT ./24.png
 INPUT ./24.png
 INPUT 24.png
