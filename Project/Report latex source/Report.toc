@@ -10,5 +10,5 @@
 \contentsline {section}{Layer 3 Internetworking View on Linux Systems}{10}{section*.34}%
 \contentsline {section}{Virtual LANs (VLANs)}{11}{section*.44}%
 \contentsline {chapter}{Namespaces in linux}{14}{chapter*.52}%
-\contentsline {chapter}{Acknowledgments}{17}{chapter*.64}%
-\contentsline {chapter}{References}{18}{section*.65}%
+\contentsline {chapter}{Acknowledgments}{18}{chapter*.65}%
+\contentsline {chapter}{References}{19}{section*.66}%

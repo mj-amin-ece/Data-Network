@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.2)  31 JAN 2024 02:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.2)  2 FEB 2024 06:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -556,31 +556,46 @@ File: 24.png Graphic file (type png)
 <use 24.png>
 Package pdftex.def Info: 24.png  used on input line 703.
 (pdftex.def)             Requested size: 472.71088pt x 178.03098pt.
- [15 <./24.png>] [16] [17
+ [15 <./24.png>]
+<33.jpg, id=371, 773.89125pt x 573.14125pt>
+File: 33.jpg Graphic file (type jpg)
+<use 33.jpg>
+Package pdftex.def Info: 33.jpg  used on input line 832.
+(pdftex.def)             Requested size: 420.19191pt x 311.19702pt.
+<34.jpg, id=372, 854.19125pt x 364.36125pt>
+File: 34.jpg Graphic file (type jpg)
+<use 34.jpg>
+Package pdftex.def Info: 34.jpg  used on input line 834.
+(pdftex.def)             Requested size: 420.19191pt x 179.23354pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16] [17 <./33.jpg> <./34.jpg>] [18
 
 ] (./Report.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 44.
-) [18
+) [19
 
 
 ] (./Report.aux)
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 1B8ED7BF005DB04D655F5EA9B2F03F69;2752.
+(rerunfilecheck)             Checksum: 6D48AAAFD70ACB737DBA8989B58902A4;2752.
  ) 
 Here is how much of TeX's memory you used:
- 14654 strings out of 476025
- 228608 string characters out of 5794015
- 2085382 words of memory out of 5000000
- 34648 multiletter control sequences out of 15000+600000
+ 14670 strings out of 476025
+ 228778 string characters out of 5794015
+ 2086382 words of memory out of 5000000
+ 34660 multiletter control sequences out of 15000+600000
  550528 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,117p,560b,2052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Report.pdf (19 pages, 1126972 bytes).
+Output written on Report.pdf (20 pages, 1259217 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
- 264 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 541 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 266 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
