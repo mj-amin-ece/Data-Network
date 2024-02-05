@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OSPFASConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OSPF.xsd">
+
+<!-- Areas -->
+  <Area id="0.0.0.0">
+    <AddressRange address="192.168.4.0" mask="255.255.255.0" status="Advertise" />
+  </Area>
+
+  <Area id="0.0.0.1">
+  </Area>
+
+  <Area id="0.0.0.2">
+  </Area>
+  
+  <Area id="0.0.0.3">
+  </Area>
+
+  <!-- Routers -->
+  
+  <Router name="Router1" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3" />
+    <PointToPointInterface ifName="eth1" areaID="0.0.0.0"/>
+  </Router>
+  
+  <Router name="Router" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2" />
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2" />
+    <PointToPointInterface ifName="eth0" areaID="0.0.0.0" />
+  </Router>
+
+  <Router name="Router3" RFC1583Compatible="true">
+    <PointToPointInterface ifName="eth0" areaID="0.0.0.0" />
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0" />
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.0" />
+    <PointToPointInterface ifName="eth3" areaID="0.0.0.0" />
+    <PointToPointInterface ifName="eth4" areaID="0.0.0.0"/>  
+  </Router>
+
+  <Router name="Router2" RFC1583Compatible="true">
+    <PointToPointInterface ifName="eth2" areaID="0.0.0.0" />
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.1" />
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.1" />
+    
+  </Router>
+
+  
+
+</OSPFASConfig>
