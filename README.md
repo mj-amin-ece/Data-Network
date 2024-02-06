@@ -39,7 +39,7 @@ This repository contains lecture slides in PDF format covering the following top
 
 ## Contact
 
-If you have any questions, you can contact the instructor at m.j.amin200@gmail.com.
+If you have any questions, you can contact the me at m.j.amin200@gmail.com.
 
 ## Recommended Textbooks
 
