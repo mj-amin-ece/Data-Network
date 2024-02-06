@@ -1,8 +1,6 @@
-Here is a draft README file for your data networks assignment:
-
 # Data Networks Assignment 1
 
-This repository contains my submission for Assignment 1 for my Data Networks course. 
+This Folder contains my submission for Assignment 1 for my Data Networks course. 
 
 ## Overview
 
@@ -20,6 +18,6 @@ This assignment covers concepts related to the physical layer of data networks. 
 ## Files
 
 - `DN_HW1.pdf` - The assignment prompt with all questions
-- `assignment1.pdf` - My written solutions to the assignment questions
+- `DN-HW1.pdf` - My written solutions to the assignment questions
 
 
