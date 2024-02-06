@@ -1,6 +1,6 @@
 # Data Networks Course
 
-This repository contains lecture slides and Assignments for the Data Networks graduate course offered in Fall 2023.
+This repository contains lecture slides and Assignments for the Data Networks graduate course offered in Fall 2023 at Sharif University of Technology.
 
 ## Instructor
 
